@@ -1,0 +1,115 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 10.4 (Ubuntu 10.4-0ubuntu0.18.04)
+-- Dumped by pg_dump version 10.4 (Ubuntu 10.4-0ubuntu0.18.04)
+
+-- Started on 2018-07-25 11:44:55 CDT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 2912 (class 1262 OID 25152)
+-- Name: indices_test; Type: DATABASE; Schema: -; Owner: -
+--
+
+CREATE DATABASE indices_test WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_US.UTF-8' LC_CTYPE = 'en_US.UTF-8';
+
+
+\connect indices_test
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 1 (class 3079 OID 13041)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2914 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 196 (class 1259 OID 25159)
+-- Name: wp_posts; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.wp_posts (
+    "ID" integer NOT NULL,
+    "URL" character varying,
+    post_date timestamp without time zone,
+    post_modified timestamp without time zone,
+    user_login character varying(50),
+    post_title character varying,
+    post_excerpt character varying(5000),
+    category character varying,
+    post_tag character varying,
+    coauthors character varying,
+    "Post" character varying,
+    "Documento" character varying(100),
+    "Presentación" character varying,
+    "Base de datos" character varying,
+    "Boletín" character varying,
+    "Resumen Ejecutivo" character varying,
+    "Notas" character varying,
+    "Area_1" character varying,
+    "Area_2" character varying,
+    "Area_3" character varying,
+    tipo_contenido character varying,
+    "Estatus" integer
+);
+
+
+--
+-- TOC entry 2906 (class 0 OID 25159)
+-- Dependencies: 196
+-- Data for Name: wp_posts; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (1217, 'http://imco.org.mx/?p=1217', '2012-11-22 11:30:47', '2012-11-22 11:30:47', 'imco', 'Índice de Competitividad Estatal 2012', '¿Dónde quedó la bolita? Del federalismo de la recriminación al federalismo de la eficacia,¿Por qué este título?. La bolita se llama responsabilidad pública y las tapas portan los títulos de federación, estados y municipios ¿Dónde está la responsabilidad por las escuelas, las clínicas, la seguridad de las calles? ¿Es federal, estatal, municipal? ¿O tal vez es de todos y por ello de nadie? En esta edición se realizó una investigación exhaustiva acerca de las relaciones de responsabilidad que existe entre el gobierno federal y las entidades federativas. La ambigüedad de dichas responsabilidades no solo reduce los incentivos políticos y económicos de las dependencias gubernamentales para actuar en beneficio de la ciudadanía si no que impone limitaciones importantes a la gestión eficiente de los recursos fiscales, y entorpece la continuidad y evaluación de políticas públicas, problemática abordada desde la perspectiva de las finanzas públicas. ', 'Competitividad, Temas', 'NULL', 'NULL', 'https://imco.org.mx/competitividad/indice_de_competitividad_estatal_2012/', 'https://imco.org.mx/indice_de_competitividad_estatal_2012/', 'https://imco.org.mx/wp-content/uploads/2012/11/presentacion_indice_de_estados_2012_buena.pdf', 'https://imco.org.mx/wp-content/uploads/2013/07/Ind_est_2012.xlsx', 'https://imco.org.mx/wp-content/uploads/2012/11/boletin_competitividad_estatal_2012.pdf', NULL, 'Falta descripción que viene en el otro post ', 'Competitividad y economía', 'Finanzas públicas', NULL, 'Investigación', NULL);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (29642, 'http://imco.org.mx/?p=29642', '2013-07-03 23:28:46', '2014-09-08 18:07:11', 'imco', 'Índice de Competitividad Estatal 2012', '<p>Índice de competitividad estatal 2012</p>', 'Competitividad, Indices', 'NULL', 'NULL', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (872, 'http://imco.org.mx/?p=872', '2011-07-20 18:27:18', '2016-08-02 12:36:01', 'imco', 'Índice de Competitividad Municipal en Materia de Vivienda 2011', 'Índice de Competitividad Municipal en Materia de Vivienda 2011 (INCOMUV). El presente trabajo estudia la competitividad en materia de vivienda de los municipios más importantes del país; es decir, la capacidad para aumentar el valor de las inversiones en vivienda en el largo plazo. ', 'Competitividad, Indices, Competitiviness', 'México, desarrollo urbano, imco, ciudades, calidad de vida, competitividad, índices, estudio, planeación urbana, municipios, población, inversiones, vivienda, planeación municipal, índice de competitividad municipal', 'NULL', 'https://imco.org.mx/competitividad/indice_de_competitividad_municipal_en_materia_de_vivienda_20111/', 'https://imco.org.mx/wp-content/uploads/2011/7/viviendas_para_desarrollar_ciudades_completo.pdf', 'https://imco.org.mx/wp-content/uploads/2011/7/presentacion_incomuv_19julio11.pdf', 'http://www.comparadondevives.org/downloads/base_viv11_completa.xlsx', NULL, 'http://www.comparadondevives.org/downloads/Resumen_Ejecutivo_INCOMUV.pdf', NULL, 'Competitividad y economía', 'Desarrollo urbano', NULL, 'Investigación', 1);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (869, 'http://imco.org.mx/?p=869', '2011-07-19 14:15:44', '2011-07-19 14:15:44', 'imco', 'Índice de Competitividad Municipal en materia de Vivienda', 'INCOMUV 2011<ul><li>402 municipios<li>78 indicadores<li>3 pilares de competitividad<li> Competitividad de la vivienda: La capacidad de un municipio para aumentar el valor de la vivienda en el largo plazo<li>', 'Medio ambiente, Temas', 'NULL', 'NULL', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (864, 'http://imco.org.mx/?p=864', '2011-06-28 20:22:54', '2016-08-01 14:59:11', 'imco', 'Invitación: Índice de Competitividad Municipal en Materia de Vivienda 2011 (INCOMUV)', 'El Instituto Mexicano para la Competitividad A.C. (IMCO) presenta del Índice de Competitividad en Materia de Vivienda 2011 (INCOMUV) que correrá a cargo de la Lic. Gabriela Alarcón, Investigadora del IMCO y que contará con la participación de: Víctor Manuel Borrás Setién, Director General de INFONAVIT, Javier Gavito Mohar, Director General de SHF, Ariel Cano Cuevas, Director General de CONAVI, y Juan E. Pardinas, Director General del IMCO.En el evento se darán a conocer los resultados del Índice que compara la competitividad de los 402 municipios urbanos más importantes del país sobre las condiciones y tendencias asociadas con la calidad de vida a partir de la vivienda y cómo ésta impacta en su plusvalía. Esta es la primera edición de nuestro índice de vivienda, realizada junto con Infonavit, Conavi y SHF.Entre los temas abordados se encuentran la normatividad para la construcción de vivienda y políticas de desarrollo urbano, así como temas referentes a ciudades sustentables. Nuestro análisis está complementado con la inclusión de casos de éxito de algunos municipios.Debido a que tenemos cupo limitado le solicitamos confirmar su asistencia al teléfono (55) 5985 1017 exts. 100 y 140, o al correo electrónico <span id=''eeEncEmail_SeZCgLuAHM''>.(JavaScript debe estar activado para ver esta dirección de email)</span><script type="text/javascript">var l=new Array();var output = '''';l[0]=''>'';l[1]=''a'';l[2]=''/'';l[3]=''<'';l[4]='' 120'';l[5]='' 109'';l[6]='' 46'';l[7]='' 103'';l[8]='' 114'';l[9]='' 111'';l[10]='' 46'';l[11]='' 111'';l[12]='' 99'';l[13]='' 109'';l[14]='' 105'';l[15]='' 64'';l[16]='' 111'';l[17]='' 114'';l[18]='' 116'';l[19]='' 115'';l[20]='' 105'';l[21]='' 103'';l[22]='' 101'';l[23]='' 114'';l[24]=''>'';l[25]=''"'';l[26]='' 120'';l[27]='' 109'';l[28]='' 46'';l[29]='' 103'';l[30]='' 114'';l[31]='' 111'';l[32]='' 46'';l[33]='' 111'';l[34]='' 99'';l[35]='' 109'';l[36]='' 105'';l[37]='' 64'';l[38]='' 111'';l[39]='' 114'';l[40]='' 116'';l[41]='' 115'';l[42]='' 105'';l[43]='' 103'';l[44]='' 101'';l[45]='' 114'';l[46]='':'';l[47]=''o'';l[48]=''t'';l[49]=''l'';l[50]=''i'';l[51]=''a'';l[52]=''m'';l[53]=''"'';l[54]=''='';l[55]=''f'';l[56]=''e'';l[57]=''r'';l[58]=''h'';l[59]=''a '';l[60]=''<'';for (var i = l.length-1; i >= 0; i=i-1){ if (l[i].substring(0, 1) == '' '') output += "&#"+unescape(l[i].substring(1))+";"; else output += unescape(l[i]);}document.getElementById(''eeEncEmail_SeZCgLuAHM'').innerHTML = output;</script> a más tardar el viernes 15 de julio.El objetivo del presente estudio fue de evidenciar el vínculo existente entre la competitividad y el desempeño en materia de vivienda de las entidades. ', 'Competitividad, Indices, Competitiviness', 'NULL', 'NULL', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (50316, 'http://imco.org.mx/?p=50316', '2018-05-21 17:40:25', '2018-05-23 16:49:03', 'imco', 'Pequeños pasos para transformar al sistema de salud', 'Para tener un México más saludable y competitivo, se necesitan servicios de salud más inclusivos, eficientes y transparentes.', 'Política y Buen Gobierno, Temas, Artículos, banner_es', 'propuestas, México, salud, enfermedades, hospitales, sistema, servicios de salud, diabetes, médicos, candidatos, medicamentos, gasto en salud, gasto de bolsillo, consultorios, farmacias', 'NULL', 'https://imco.org.mx/temas/pequenos-pasos-transformar-al-sistema-salud/', 'https://imco.org.mx/wp-content/uploads/2018/05/IMCO-pequen%CC%83os-pasos.pdf', 'https://imco.org.mx/wp-content/uploads/2018/05/Presentaci%C3%B3n_Peque%C3%B1os-pasos-para-transformar-al-sistema-de-salud_22-05-2018.pdf', NULL, 'https://imco.org.mx/wp-content/uploads/2018/05/Bolet%C3%ADn_Peque%C3%B1os-pasos-para-transformar-al-sistema-de-salud_22-05-2018.pdf', NULL, NULL, 'Desarrollo sustentable', NULL, NULL, 'Investigación', 1);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (38978, 'http://imco.org.mx/?p=38978', '2015-11-19 10:00:42', '2016-11-14 11:11:11', 'imco', 'Índice de Competitividad Internacional 2015. La corrupción en México: Transamos y no avanzamos', 'Presentación del Índice de Competitividad Internacional 2015. La corrupción en México: Transamos y no avanzamos. ', 'Competitividad, Temas, Indices', 'NULL', 'NULL', 'https://imco.org.mx/competitividad/indice-de-competitividad-internacional-2015-la-corrupcion-en-mexico-transamos-y-no-avanzamos/', NULL, 'https://imco.org.mx/wp-content/uploads/2015/11/2015-ICI-Presentacion_completa.pdf', 'http://api.imco.org.mx/release/latest/vendor/imco/indices-api/documentos/Competitividad/%C3%8Dndice%20de%20Competitividad%20Internacional/2015-01-01_0900%20La%20corrupci%C3%B3n%20en%20M%C3%A9xico%3A%20Transamos%20y%20no%20avanzamos/Documentos%20de%20resultados/2015%20ICI%20Base%20de%20datos.xlsx', 'https://imco.org.mx/wp-content/uploads/2015/11/2015_ICI_Boletin.pdf', NULL, NULL, 'Competitividad y economía', 'Anticprrupción', 'Estado de derecho', 'Investigación', 1);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (30694, 'http://imco.org.mx/?p=30694', '2014-01-13 13:59:40', '2015-02-05 17:19:57', 'juan.pardinas', 'El gober imbécil', 'La frivolidad del poder ya tiene imagen y rostro. Es la foto de un imbécil de ojos azules que se llama Manuel Velasco y es gobernador de Chiapas. ', 'Política y Buen Gobierno, Artículos', 'NULL', 'NULL', 'https://imco.org.mx/politica_buen_gobierno/el-gober-imbecil/', NULL, NULL, NULL, NULL, NULL, NULL, 'Estado de derecho', NULL, NULL, 'Artículo', 1);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (37792, 'http://imco.org.mx/?p=37792', '2015-07-23 16:30:58', '2016-11-14 11:59:07', 'imco', 'Medición de la pobreza en México 2014 vía Coneval', 'Entre 2012 y 2014 el porcentaje de población en pobreza subió, mientras que el porcentaje de pobreza extrema bajó. ', 'Temas, banner_es, Economía y Finanzas, IMCO recomienda', 'sinaloa, educacion, seguridad social, hogar, INEGI, bases de datos, medición, indicador, indicadores, resultados, calidad, acceso, Veracruz, Estado de México, población, nivel nacional, servicios de salud, Coahuila, familias, hallazgos, Baja California Sur, Oaxaca, reducción, Hidalgo, pobreza, vivienda, ingreso, cohesión social, poder de compra, hogares, alimentación, espacios, entidad federativa, Rezago Educativo, Morelos, CONEVAL, pobre, Consejo Nacional de Evaluación de la Política de Desarrollo Social, Medición de la pobreza en México, Instituto Nacional de Estadística y Geografía, carencias sociales, servicios básicos, promedio trimestral, reducción del ingreso, deciles, efecto negativo, pobreza extrema, dinámica demográfica, valor mínimo', 'NULL', 'https://imco.org.mx/banner_es/medicion-de-la-pobreza-en-mexico-2014-via-coneval/', NULL, NULL, NULL, NULL, NULL, NULL, 'Competitividad', NULL, NULL, 'IMCO Recomienda', 1);
+INSERT INTO public.wp_posts ("ID", "URL", post_date, post_modified, user_login, post_title, post_excerpt, category, post_tag, coauthors, "Post", "Documento", "Presentación", "Base de datos", "Boletín", "Resumen Ejecutivo", "Notas", "Area_1", "Area_2", "Area_3", tipo_contenido, "Estatus") VALUES (43015, 'http://imco.org.mx/?p=43015', '2016-09-05 12:47:44', '2016-09-30 13:06:46', 'imco', 'Urgente fortalecer capacidades técnicas del Poder Legislativo en materia presupuestaria: Colectivo Pe$o', 'El Colectivo PE$O busca resolver dos problemas públicos urgentes: mejorar la capacidad técnica del Legislativo en materia hacendaria y regular y transparentar el proceso de participación pública durante el ciclo presupuestario ante ese Poder. ', 'Política y Buen Gobierno, Temas, Economía y Finanzas', 'imco, presupuesto, legisladores, transparencia, México Evalúa, política pública, rendición de cuentas, poder legislativo, organizaciones de la sociedad civil, regulación, Finanzas Públicas, deuda pública, paquete económico, CEESP, recursos públicos, gasto, Instituto de Políticas para el Transporte y el Desarrollo, Cámara de Diputados, Instituto Mexicano para la Competitividad, ingreso, Senado, finanzas, endeudamiento, iniciativa de ley, ITDP, legislativo, ciclo presupuestario, Colectivo por un Presupuesto Sostenible, Colectivo PE$O, Centro de Estudios Económicos del Sector Privado, Centro de Investigación Económica y Presupuestaria, CIEP, Comunidad Mexicana de Gestión para Resultados, Ethos, Fundar, Gestión Social y Cooperación, GESOC AC, hacienda pública, Instituto Belisario Domínguez, CEFP, Poder Legislativo Federal, Centro Estudios de las Finanzas Públicas, Paquete Económico 2017, información presupuestaria, Acción Ciudadana Frente a la Pobreza', 'NULL', 'https://imco.org.mx/politica_buen_gobierno/urgente-fortalecer-capacidades-tecnicas-del-poder-legislativo-en-materia-presupuestaria-colectivo-peo/', NULL, NULL, NULL, NULL, NULL, NULL, 'Finanzas Públicas', NULL, NULL, 'Colaboración', 1);
+
+
+-- Completed on 2018-07-25 11:44:55 CDT
+
+--
+-- PostgreSQL database dump complete
+--
+
